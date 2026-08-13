@@ -19,6 +19,7 @@ public class Task {
     //Add Your Task
     public static void add(){
         System.out.println("Enter your task : ");
+        sc.nextLine();
          String taskAdd = sc.nextLine();
          task.add(taskAdd);
         System.out.println("Success full add your Task....");
