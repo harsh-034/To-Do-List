@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+
        int choice;
         do {
             Task.Display();
-            choice = input.nextInt();
+            choice = Task.sc.nextInt();
 
             switch(choice){
                 case 1: Task.add();
@@ -18,6 +18,9 @@ public class Main {
                         break;
                 case 4: Task.delete();
                         break;
+                case 5:
+                    System.out.println("Exit.......");
+                    break;
                 default:
                     System.out.println("Plz Enter right number......");
 
