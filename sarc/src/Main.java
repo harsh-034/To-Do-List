@@ -29,16 +29,14 @@ public class Main {
                     System.out.println("New Task add SuccessFul....");
                     break;
                 case 2:
-
                     if (task.size() == 0) {
                         System.out.println("Empty Task...............");
                         System.out.println("Please add new Task .............");
                         break;
-                    } else {
+                    }else {
                         System.out.println("  Your Task List ");
                         for (int i = 0; i < task.size(); i++) {
                             System.out.println(i + 1 + ". " + task.get(i));
-
                         }
                         break;
                     }
@@ -52,7 +50,6 @@ public class Main {
                     }else{
                         System.out.println("Plz Enter Valid Task Number........ ");
                     }
-
                      break;
                 case 4:
                     System.out.println("Which task number update :");
@@ -67,7 +64,6 @@ public class Main {
                         System.out.println("Plz Enter Valid Task Number........ ");
                     }
                     break;
-
                 default:if(choice != 5){
                     System.out.println("Plese enter valid Number........... ");
 
