@@ -33,7 +33,7 @@ public class Task {
         }else {
             System.out.println("<--------List of Task---------->");
             for (int i = 0; i < task.size(); i++) {
-                System.out.println(i + 1 + " | " + task.get(i));
+                System.out.println(i + 1 + ") " + task.get(i));
             }
         }
     }
@@ -42,18 +42,33 @@ public class Task {
     public static void edit(){
         System.out.println("Enter task number for update. ");
         int update = sc.nextInt();
-        System.out.println("Write Your update task.");
-        String updateTask = sc.nextLine();
-        task.set(update,updateTask);
-        System.out.println("Successful update your task.");
+        if(update-1   < task.size()) {
+            System.out.println("Write Your update task.");
+            sc.nextLine();
+            String updateTask = sc.nextLine();
+            task.set(update-1, updateTask);
+            System.out.println("Successful update your task.");
+        }else if(task.isEmpty()){
+            System.out.println("Your Task is Empty.....?");
+            System.out.println("PLz Add the Task..... ");
+        }else{
+            System.out.println("Plz enter right Number For update task.......? ");
+        }
     }
 
     //Delete Your Task.
     public static void delete(){
         System.out.println("Enter your task number for Delete.");
         int delete = sc.nextInt();
-        task.remove(delete);
-        System.out.println("Successful remove your task...");
+        if(delete-1   < task.size()) {
+            task.remove(delete-1);
+            System.out.println("Successful remove your task...");
+        }else if(task.isEmpty()){
+            System.out.println("Your Task is Empty.....?");
+            System.out.println("PLz Add the Task..... ");
+    }else{
+            System.out.println("Plz enter right Number For Delete task.......? ");
+        }
     }
 
 }

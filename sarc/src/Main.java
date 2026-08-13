@@ -8,6 +8,7 @@ public class Main {
         do {
             Task.Display();
             choice = input.nextInt();
+
             switch(choice){
                 case 1: Task.add();
                        break;
@@ -22,6 +23,7 @@ public class Main {
 
             }
         }while(choice != 5);
+        System.out.println("<< Thanks For using To Do List >>");
 
     }
     }
